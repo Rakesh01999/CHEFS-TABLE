@@ -1,0 +1,87 @@
+[
+    {
+      "recipe_id": 1,
+      "recipe_name": "Chicken Stir Fry",
+      "recipe_image": "https://i.postimg.cc/3Rk4Whdw/Chicken-Stir-Fry.jpg",
+      "short_description": "A delicious and easy-to-make chicken stir fry.",
+      "ingredients": [
+        "550g chicken breast",
+        "120ml soy sauce",
+        "200g basil leaves",
+        "400g mushrooms"
+      ],
+      "preparing_time": "30 min",
+      "calories": "320 calories"
+    },
+    {
+      "recipe_id": 2,
+      "recipe_name": "Vegetable Curry",
+      "recipe_image": "https://i.postimg.cc/SNF2Qwqy/Vegetable-Curry.jpg",
+      "short_description": "A flavorful vegetarian curry dish with mixed vegetables.",
+      "ingredients": [
+        "300g mixed vegetables",
+        "150g coconut milk",
+        "100g curry paste",
+        "200g tofu"
+      ],
+      "preparing_time": "45 min",
+      "calories": "250 calories"
+    },
+    {
+      "recipe_id": 3,
+      "recipe_name": "Spaghetti Bolognese",
+      "recipe_image": "https://i.postimg.cc/hPvQWjnw/Spaghetti-Bolognese.png",
+      "short_description": "Classic Italian pasta dish with rich meat sauce.",
+      "ingredients": [
+        "400g spaghetti",
+        "300g ground beef",
+        "500ml tomato sauce",
+        "100g grated Parmesan cheese"
+      ],
+      "preparing_time": "40 min",
+      "calories": "380 calories"
+    },
+    {
+      "recipe_id": 4,
+      "recipe_name": "Greek Salad",
+      "recipe_image": "https://i.postimg.cc/5yQ7K98Z/Greek-Salad.png",
+      "short_description": "A refreshing salad with tomatoes, cucumbers, olives, and feta cheese.",
+      "ingredients": [
+        "200g cherry tomatoes",
+        "150g cucumber",
+        "100g black olives",
+        "150g feta cheese"
+      ],
+      "preparing_time": "15 min",
+      "calories": "180 calories"
+    },
+    {
+      "recipe_id": 5,
+      "recipe_name": "Mushroom Risotto",
+      "recipe_image": "https://i.postimg.cc/yNbxMGvC/Mushroom-Risotto.jpg",
+      "short_description": "Creamy and flavorful risotto made with mushrooms and Arborio rice.",
+      "ingredients": [
+        "300g Arborio rice",
+        "250g mushrooms",
+        "1L vegetable broth",
+        "100ml white wine"
+      ],
+      "preparing_time": "35 min",
+      "calories": "300 calories"
+    },
+    {
+      "recipe_id": 6,
+      "recipe_name": "Banana Bread",
+      "recipe_image": "https://i.postimg.cc/wBZxfmj6/Banana-Bread.jpg",
+      "short_description": "Homemade banana bread with walnuts, perfect for breakfast or dessert.",
+      "ingredients": [
+        "3 ripe bananas",
+        "200g all-purpose flour",
+        "100g walnuts",
+        "150g sugar"
+      ],
+      "preparing_time": "50 min",
+      "calories": "220 calories"
+    }
+  ]
+  
