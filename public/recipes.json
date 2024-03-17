@@ -10,8 +10,8 @@
         "200g basil leaves",
         "400g mushrooms"
       ],
-      "preparing_time": "30 min",
-      "calories": "320 calories"
+      "preparing_time": 30,
+      "calories": 320 
     },
     {
       "recipe_id": 2,
@@ -24,8 +24,8 @@
         "100g curry paste",
         "200g tofu"
       ],
-      "preparing_time": "45 min",
-      "calories": "250 calories"
+      "preparing_time": 45 ,
+      "calories": 250 
     },
     {
       "recipe_id": 3,
@@ -38,8 +38,8 @@
         "500ml tomato sauce",
         "100g grated Parmesan cheese"
       ],
-      "preparing_time": "40 min",
-      "calories": "380 calories"
+      "preparing_time": 40 ,
+      "calories": 380 
     },
     {
       "recipe_id": 4,
@@ -52,8 +52,8 @@
         "100g black olives",
         "150g feta cheese"
       ],
-      "preparing_time": "15 min",
-      "calories": "180 calories"
+      "preparing_time": 15 ,
+      "calories": 180 
     },
     {
       "recipe_id": 5,
@@ -66,8 +66,8 @@
         "1L vegetable broth",
         "100ml white wine"
       ],
-      "preparing_time": "35 min",
-      "calories": "300 calories"
+      "preparing_time": 35 ,
+      "calories": 300 
     },
     {
       "recipe_id": 6,
@@ -80,8 +80,8 @@
         "100g walnuts",
         "150g sugar"
       ],
-      "preparing_time": "50 min",
-      "calories": "220 calories"
+      "preparing_time": 50 ,
+      "calories": 220 
     }
   ]
   

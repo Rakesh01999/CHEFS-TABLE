@@ -54,7 +54,7 @@ function App() {
 
   }
 
-  // ----------for current add -------------------
+  // ----------for current add & remove from previous cart -------------------
 
   const [currents, setCurrents] = useState([]);
 
@@ -65,6 +65,7 @@ function App() {
     const newCurrents = [...currents, incart];
     setCurrents(newCurrents);
     // remove
+    
     // const remainCart = cart.filter(incart => incart.id !==id);
     // setCart(remainCart);
     const updatedCart = cart.filter(item => item.recipe_id !== incart.recipe_id);
