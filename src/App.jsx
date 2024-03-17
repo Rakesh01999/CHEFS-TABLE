@@ -50,6 +50,10 @@ function App() {
 
   }
 
+  const handleRemoveFromCart = id => {
+
+  }
+
   // ----------for current add -------------------
 
   const [currents, setCurrents] = useState([]);
@@ -57,8 +61,15 @@ function App() {
   const handleAddToCurrents = incart => {
     // console.log('incart add');
     console.log(incart);
+    // add
     const newCurrents = [...currents, incart];
     setCurrents(newCurrents);
+    // remove
+    // const remainCart = cart.filter(incart => incart.id !==id);
+    // setCart(remainCart);
+    const updatedCart = cart.filter(item => item.recipe_id !== incart.recipe_id);
+    setCart(updatedCart);
+
   }
 
   return (
@@ -69,7 +80,7 @@ function App() {
       <div className='md:flex '>
         <Recipes handleAddToCart={handleAddToCart}></Recipes>
         <div>
-          <Cart handleAddToCurrents={handleAddToCurrents} cart={cart}></Cart>
+          <Cart handleAddToCurrents={handleAddToCurrents} handleRemoveFromCart={handleRemoveFromCart} cart={cart}></Cart>
           <Currents currents={currents}></Currents>
         </div>
       </div>

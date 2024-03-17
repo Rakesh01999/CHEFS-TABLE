@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-const Incart = ({incart, handleAddToCurrents}) => {
+const Incart = ({incart, handleAddToCurrents, handleRemoveFromCart}) => {
     // const {title} = incart ;
     const {recipe_name, preparing_time, calories} = incart ;
     return (
@@ -15,7 +15,8 @@ const Incart = ({incart, handleAddToCurrents}) => {
 
 Incart.PropTypes = {
     incart: PropTypes.object.isRequired,
-    handleAddToCurrents: PropTypes.func
+    handleAddToCurrents: PropTypes.func ,
+    handleRemoveFromCart: PropTypes.func
 }
 
 export default Incart;
