@@ -1,7 +1,8 @@
+import PropTypes from 'prop-types' ;
 import { IoTimeOutline } from "react-icons/io5";
 import { AiOutlineFire } from "react-icons/ai";
 
-const Recipe = ({ recipe }) => {
+const Recipe = ({ recipe, handleAddToCart }) => {
     console.log(recipe);
     return (
         <div>
@@ -26,12 +27,17 @@ const Recipe = ({ recipe }) => {
                         </div>
                     </div>
                     <div class="card-actions mt-6">
-                        <button class="btn bg-[#0BE58A] rounded-full w-[170px] h-[49px]">Buy Now</button>
+                        <button onClick={() => handleAddToCart(recipe)} class="btn bg-[#0BE58A] rounded-full w-[170px] h-[49px]">Want to Cook</button>
                     </div>
                 </div>
             </div>
         </div>
     );
 };
+
+Recipe.PropTypes={
+    recipe:PropTypes.object.isRequired,
+    handleAddToCart: PropTypes.func
+}
 
 export default Recipe;
