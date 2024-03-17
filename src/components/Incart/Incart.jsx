@@ -8,7 +8,7 @@ const Incart = ({incart, handleAddToCurrents, handleRemoveFromCart}) => {
             <h3 className='w-[70px]'>{recipe_name}</h3>
             <p className='w-[70px]'>{preparing_time} minutes</p>
             <p className='w-[70px]'>{calories} calories</p>
-            <button onClick={()=>handleAddToCurrents(incart)} class="btn bg-[#0BE58A] rounded-full h-[38px] w-[115px]">Preparing</button>
+            <button onClick={()=>handleAddToCurrents(incart,preparing_time,calories)} class="btn bg-[#0BE58A] rounded-full h-[38px] w-[115px]">Preparing</button>
         </div>
     );
 };

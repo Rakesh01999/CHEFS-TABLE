@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Current from '../Current/Current';
 
-const Currents = ({ currents }) => {
+const Currents = ({ currents, time, calorie }) => {
     return (
         <div className='w-[514px] mt-6 border-solid border-gray-400 rounded-3xl'>
             <h1 className='text-[24px] font-semibold text-center'>Currently cooking:<span>{currents.length}</span></h1>
@@ -19,16 +19,18 @@ const Currents = ({ currents }) => {
             }
             <div className='border-b-2 border-gray-300 my-4'></div>
             <div>Total Time =
-                45 minutes</div>
+                {time} minutes</div>
             <div>Total Calories =
-                1050 calories</div>
+                {calorie} calories</div>
 
         </div>
     );
 };
 
 Currents.propTypes = {
-    Currents: PropTypes.array
+    Currents: PropTypes.array,
+    time: PropTypes.number.isRequired,
+    calorie: PropTypes.number
 }
 
 export default Currents;
