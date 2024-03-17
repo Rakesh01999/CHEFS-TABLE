@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types' ;
+import PropTypes from 'prop-types';
 import { IoTimeOutline } from "react-icons/io5";
 import { AiOutlineFire } from "react-icons/ai";
 
@@ -15,15 +15,30 @@ const Recipe = ({ recipe, handleAddToCart }) => {
                     <h2 class="text-[20px] font-semibold">{recipe.recipe_name}</h2>
                     <p className="text-[16px]">{recipe.short_description}</p>
                     <h2 class="text-[20px] font-medium mt-10">Ingredients: 6</h2>
-                    <p className="text-[16px] ">{recipe.ingredients}</p>
+                    {/* <p className="text-[16px] ">{recipe.ingredients}</p> */}
+
+                    {/* <ul>
+                        {recipe.ingredients.map((ingredient, index) => (
+                            <li key={index}>{ingredient}</li>
+                        ))}
+                    </ul> */}
+
+                    <div className='ml-6'>
+                        <ul style={{ listStyleType: 'disc' }}>
+                            {recipe.ingredients.map((ingredient, index) => (
+                                <li key={index}>{ingredient}</li>
+                            ))}
+                        </ul>
+                    </div>
+
                     <div className="flex justify-between mt-10">
-                        <div className="flex">
+                        <div className="flex flex-row gap-1">
                             <IoTimeOutline className="w-[18px] h-[18px]" />
-                            <p>{recipe.preparing_time}</p>
+                            <p>{recipe.preparing_time} minutes</p>
                         </div>
-                        <div className="flex">
+                        <div className="flex flex-row gap-1">
                             <AiOutlineFire className="w-[18px] h-[18px]" />
-                            <p>{recipe.calories}</p>
+                            <p>{recipe.calories} calories</p>
                         </div>
                     </div>
                     <div class="card-actions mt-6">
@@ -35,8 +50,8 @@ const Recipe = ({ recipe, handleAddToCart }) => {
     );
 };
 
-Recipe.PropTypes={
-    recipe:PropTypes.object.isRequired,
+Recipe.PropTypes = {
+    recipe: PropTypes.object.isRequired,
     handleAddToCart: PropTypes.func
 }
 

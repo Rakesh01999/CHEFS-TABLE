@@ -5,7 +5,7 @@ import Incart from '../Incart/Incart';
 
 const Cart = ({ cart, handleAddToCurrents, handleRemoveFromCart, time }) => {
     return (
-        <div className='w-[514px] mt-6 border-solid border-gray-400 rounded-3xl'>
+        <div className='w-[514px] mt-6  rounded-3xl'>
             <h1 className='text-[24px] font-semibold text-center'>Want to cook: <span>{cart.length}</span></h1>
             <div className='border-b-2 border-gray-300 my-4'></div>
             <div className='px-4 flex gap-16'>

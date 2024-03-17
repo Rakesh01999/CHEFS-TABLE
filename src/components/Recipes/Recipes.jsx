@@ -12,9 +12,9 @@ const Recipes = ({handleAddToCart}) => {
     }, [])
 
     return (
-        <div>
+        <div className="mx-10 md:mx-32">
             {/* <h3>Recipes: {recipes.length}</h3> */}
-            <div className="w-[890px] p-6 grid grid-cols-2 ml-40">
+            <div className="w-[890px] p-6 grid md:grid-cols-2">
                 {
                     recipes.map(recipe => <Recipe key={recipe.id} recipe={recipe} handleAddToCart={handleAddToCart}></Recipe>)
                 }

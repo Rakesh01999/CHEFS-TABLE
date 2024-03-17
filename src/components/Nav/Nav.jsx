@@ -5,7 +5,7 @@ const Nav = () => {
         <div>
             <nav className="md:container md:mx-auto">
                 {/* <div class="navbar bg-base-100 w-[1320px] h-[56px] mt-2 ml-32"> */}
-                <div class="navbar w-[335px] md:w-[1320px] h-[56px] lg:w-full mt-2">
+                <div class="navbar w-[450px] md:w-[1320px] h-[56px] lg:w-full mt-2">
                     <div class="navbar-start flex-1">
                         <div class="dropdown">
                             <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -16,7 +16,7 @@ const Nav = () => {
                                 </svg>
                             </div>
                             <ul tabindex="0"
-                                class="menu text-base menu-sm dropdown-content mt-3 z-[1] p-2 text-base shadow bg-base-100 rounded-box w-52">
+                                class="menu menu-sm dropdown-content mt-3 z-[1] p-2 text-base shadow bg-base-100 rounded-box w-52">
                                 <li><a class="">Home</a></li>
                                 <li><a>Recipes</a></li>
                                 <li><a>About</a></li>
