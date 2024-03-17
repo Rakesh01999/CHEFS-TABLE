@@ -7,17 +7,60 @@ import Nav from './components/Nav/Nav'
 import Recipes from './components/Recipes/Recipes'
 import Title from './components/Title/Title'
 import Recipe from './components/Recipe/Recipe'
+import Incart from './components/Incart/Incart'
+import Currents from './components/Currents/Currents'
+import Toast from './components/Toast/Toast'
 
 
 function App() {
+  // ---------for want to cook add--------------
   const [cart, setCart] = useState([]);
 
   const handleAddToCart = recipe => {
     // console.log('cart add');
     // console.log(recipe);
-    const newCart = [...cart, recipe];
-    setCart(newCart) ;
+    // const newCart = [...cart, recipe];
+    // setCart(newCart);
+
+    // --------------
+    // const alreadyExist = cart.find(c=> c.id == recipe.id);
+    // if(!alreadyExist){
+    //   // setCart(newCart);
+    //   // setCart(c=> [...c, recipe]);
+    // }
+    // --------------
+    const isAlreadyInCart = cart.some(item => item.recipe_id === recipe.recipe_id);
+    if (isAlreadyInCart) {
+      // toast.error('This recipe is already in your cart!', {
+      //   position: 'bottom-right',
+      //   autoClose: 3000,
+      //   hideProgressBar: false,
+      //   closeOnClick: true,
+      //   pauseOnHover: true,
+      //   draggable: true,
+      //   progress: undefined,
+      // });
+
+      <Toast></Toast>
+    } 
+    else {
+      const newCart = [...cart, recipe];
+      setCart(newCart);
+    }
+
   }
+
+  // ----------for current add -------------------
+
+  const [currents, setCurrents] = useState([]);
+
+  const handleAddToCurrents = incart => {
+    // console.log('incart add');
+    console.log(incart);
+    const newCurrents = [...currents, incart];
+    setCurrents(newCurrents);
+  }
+
   return (
     <>
       <Nav></Nav>
@@ -25,7 +68,13 @@ function App() {
       <Title></Title>
       <div className='md:flex '>
         <Recipes handleAddToCart={handleAddToCart}></Recipes>
-        <Cart cart={cart}></Cart>
+        <div>
+          <Cart handleAddToCurrents={handleAddToCurrents} cart={cart}></Cart>
+          <Currents currents={currents}></Currents>
+        </div>
+      </div>
+      <div>
+
       </div>
     </>
   )

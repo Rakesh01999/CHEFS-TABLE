@@ -3,7 +3,7 @@ import { IoTimeOutline } from "react-icons/io5";
 import { AiOutlineFire } from "react-icons/ai";
 
 const Recipe = ({ recipe, handleAddToCart }) => {
-    console.log(recipe);
+    // console.log(recipe);
     return (
         <div>
             {/* <h3>Recipe: {recipe.recipe_name}</h3> */}
