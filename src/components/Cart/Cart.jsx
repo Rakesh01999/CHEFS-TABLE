@@ -1,13 +1,30 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import Incart from '../Incart/Incart';
 
-const Cart = ({cart}) => {
+const Cart = ({ cart }) => {
     return (
         <div className='w-[514px] mt-6 border-solid border-gray-400 rounded-3xl'>
-            <h1 className='text-[24px] font-semibold text-center'>Want to cook: <span>0</span></h1>
+            <h1 className='text-[24px] font-semibold text-center'>Want to cook: <span>{cart.length}</span></h1>
             <div className='border-b-2 border-gray-300 my-4'></div>
-            <h2 className='text-3xl'>Cart: {cart.length}</h2>
+
+            {/* <h2 className='text-3xl'>Cart: {cart.length}</h2> */}
+            {
+                cart.map(incart => <Incart key={incart.id} incart={incart}></Incart>)
+            }
+            <h1 className='text-[24px] font-semibold text-center'>Currently cooking: 02: <span>{cart.length}</span></h1>
+            <div className='border-b-2 border-gray-300 my-4'></div>
+            <div>Total Time =
+                45 minutes</div>
+            <div>Total Calories =
+                1050 calories</div>
+
         </div>
     );
 };
+
+Cart.propTypes = {
+    cart: PropTypes.array
+}
 
 export default Cart;
