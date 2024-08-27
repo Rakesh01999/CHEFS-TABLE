@@ -39,8 +39,8 @@ function App() {
       <Nav />
       <Banner />
       <Title />
-      {/* <div className='md:flex md:gap-8'> */}
-      <div className='flex md:gap-8'>
+      <div className='md:flex md:gap-8'>
+      {/* <div className='flex md:gap-8'> */}
         <Recipes handleAddToCart={handleAddToCart} />
         <div className='w-full md:w-[514px] border border-solid border-gray-300 rounded-2xl mt-6 md:mt-10 p-4 bg-white shadow-lg'>
           <Cart 

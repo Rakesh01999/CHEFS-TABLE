@@ -10,7 +10,7 @@ const Cart = ({ cart, handleAddToCurrents, handleRemoveFromCart }) => {
             </h1>
             <div className="border-b-2 border-gray-300 my-4"></div>
             {/* <div className="px-4 flex justify-between text-[14px] md:text-[16px] font-medium text-gray-700"> */}
-            <div className="px-5 flex gap-16 text-[14px] md:text-[16px] font-medium text-gray-700">
+            <div className="px-5 flex gap-6 md:gap-16 text-[14px] md:text-[16px] font-medium text-gray-700">
                 <p>Name</p>
                 <p>Time</p>
                 <p>Calories</p>
