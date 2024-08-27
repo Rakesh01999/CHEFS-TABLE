@@ -3,7 +3,7 @@ import { RiAccountCircleLine } from "react-icons/ri";
 const Nav = () => {
     return (
         <nav className="bg-white shadow-md">
-            <div className="container mx-auto flex items-center justify-between h-[56px] px-4 md:px-8">
+            <div className="container mx-auto my-2 flex items-center justify-between h-[56px] px-4 md:px-8">
                 <div className="flex items-center">
                     {/* Dropdown for mobile */}
                     <div className="dropdown lg:hidden">
