@@ -2,52 +2,49 @@ import { RiAccountCircleLine } from "react-icons/ri";
 
 const Nav = () => {
     return (
-        <div>
-            <nav className="md:container md:mx-auto">
-                {/* <div class="navbar bg-base-100 w-[1320px] h-[56px] mt-2 ml-32"> */}
-                <div class="navbar w-[450px] md:w-[1320px] h-[56px] lg:w-full mt-2">
-                    <div class="navbar-start flex-1">
-                        <div class="dropdown">
-                            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
-                                    stroke="currentColor">
-                                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M4 6h16M4 12h8m-8 6h16" />
-                                </svg>
-                            </div>
-                            <ul tabindex="0"
-                                class="menu menu-sm dropdown-content mt-3 z-[1] p-2 text-base shadow bg-base-100 rounded-box w-52">
-                                <li><a class="">Home</a></li>
-                                <li><a>Recipes</a></li>
-                                <li><a>About</a></li>
-                                <li><a>Search</a></li>
-                            </ul>
-                        </div>
-                        <a class="btn btn-ghost font-bold text-[12px] md:text-[32px]">Recipe Calories</a>
-                    </div>
-                    <div class="navbar-center hidden lg:flex mx-60">
-                        <div class="">
-                            <ul class="menu text-base menu-horizontal">
-                                <li><a class="">Home</a></li>
-                                <li><a>Recipes</a></li>
-                                <li><a>About</a></li>
-                                <li><a>Search</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    {/* <div class="navbar-end gap-6 ml-6"> */}
-                    <div class="navbar-end gap-3">
-                        <label class="input input-bordered rounded-3xl w-[80px] h-[40px] md:w-[260px] h-[48px] flex items-center gap-1">
-                            <svg className="w-[18px] h-[18px]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="w-4 h-4 opacity-70"><path fill-rule="evenodd" d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z" clip-rule="evenodd" /></svg>
-                            <input type="text" class="grow" placeholder="Search" />
-                        </label>
-                        <button class="rounded-full bg-[#0BE58A] flex flex-row">
-                            <RiAccountCircleLine className="w-[48px] h-[48px]" />
+        <nav className="bg-white shadow-md">
+            <div className="container mx-auto flex items-center justify-between h-[56px] px-4 md:px-8">
+                <div className="flex items-center">
+                    {/* Dropdown for mobile */}
+                    <div className="dropdown lg:hidden">
+                        <button tabIndex="0" className="btn btn-ghost p-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
                         </button>
+                        <ul tabIndex="0" className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-white rounded-box w-52">
+                            <li><a className="hover:text-teal-600">Home</a></li>
+                            <li><a className="hover:text-teal-600">Recipes</a></li>
+                            <li><a className="hover:text-teal-600">About</a></li>
+                            <li><a className="hover:text-teal-600">Search</a></li>
+                        </ul>
                     </div>
+                    {/* Logo */}
+                    <a className="font-bold text-lg md:text-2xl text-teal-600">Recipe Calories</a>
                 </div>
-            </nav>
-        </div>
+
+                {/* Centered menu for larger screens */}
+                <div className="hidden lg:flex items-center space-x-8">
+                    <a className="hover:text-teal-600">Home</a>
+                    <a className="hover:text-teal-600">Recipes</a>
+                    <a className="hover:text-teal-600">About</a>
+                    <a className="hover:text-teal-600">Search</a>
+                </div>
+
+                {/* Search and Account */}
+                <div className="flex items-center space-x-4">
+                    <div className="relative">
+                        <input type="text" placeholder="Search" className="input input-bordered w-[80px] h-[40px] md:w-[260px] h-[48px] rounded-full pl-10 pr-4" />
+                        <svg className="absolute top-1/2 left-3 transform -translate-y-1/2 w-4 h-4 text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor">
+                            <path fillRule="evenodd" d="M9.965 11.026a5 5 0 1 1 1.06-1.06l2.755 2.754a.75.75 0 1 1-1.06 1.06l-2.755-2.754ZM10.5 7a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Z" clipRule="evenodd" />
+                        </svg>
+                    </div>
+                    <button className="rounded-full bg-teal-500 text-white p-2 md:p-3">
+                        <RiAccountCircleLine className="w-6 h-6 md:w-8 md:h-8" />
+                    </button>
+                </div>
+            </div>
+        </nav>
     );
 };
 

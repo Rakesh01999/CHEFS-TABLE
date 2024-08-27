@@ -1,59 +1,60 @@
+import React from 'react';
 import PropTypes from 'prop-types';
 import { IoTimeOutline } from "react-icons/io5";
 import { AiOutlineFire } from "react-icons/ai";
 
 const Recipe = ({ recipe, handleAddToCart }) => {
-    // console.log(recipe);
     return (
-        <div>
-            {/* <h3>Recipe: {recipe.recipe_name}</h3> */}
-            <div class="card w-96 h-[684px] bg-base-100 shadow-xl mt-6">
-                <figure class="px-6 pt-6 rounded-xl">
-                    <img src={recipe.recipe_image} class="rounded-xl" />
-                </figure>
-                <div class="card-body">
-                    <h2 class="text-[20px] font-semibold">{recipe.recipe_name}</h2>
-                    <p className="text-[16px]">{recipe.short_description}</p>
-                    <h2 class="text-[20px] font-medium mt-10">Ingredients: 6</h2>
-                    {/* <p className="text-[16px] ">{recipe.ingredients}</p> */}
-
-                    {/* <ul>
-                        {recipe.ingredients.map((ingredient, index) => (
-                            <li key={index}>{ingredient}</li>
-                        ))}
-                    </ul> */}
-
-                    <div className='ml-6'>
-                        <ul style={{ listStyleType: 'disc' }}>
-                            {recipe.ingredients.map((ingredient, index) => (
-                                <li key={index}>{ingredient}</li>
-                            ))}
-                        </ul>
+        <div className="bg-white rounded-xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl">
+            <img 
+                src={recipe.recipe_image} 
+                alt={recipe.recipe_name}
+                className="w-full h-48 object-cover"
+            />
+            <div className="p-6">
+                <h2 className="text-xl font-semibold mb-2 text-gray-800">{recipe.recipe_name}</h2>
+                <p className="text-gray-600 mb-4">{recipe.short_description}</p>
+                
+                <h3 className="text-lg font-medium mb-2 text-gray-800">Ingredients:</h3>
+                <ul className="list-disc list-inside mb-4 text-gray-600">
+                    {recipe.ingredients.map((ingredient, index) => (
+                        <li key={index}>{ingredient}</li>
+                    ))}
+                </ul>
+                
+                <div className="flex justify-between items-center mb-4">
+                    <div className="flex items-center text-gray-600">
+                        <IoTimeOutline className="w-5 h-5 mr-1" />
+                        <span>{recipe.preparing_time} minutes</span>
                     </div>
-
-                    <div className="flex justify-between mt-10">
-                        <div className="flex flex-row gap-1">
-                            <IoTimeOutline className="w-[18px] h-[18px]" />
-                            <p>{recipe.preparing_time} minutes</p>
-                        </div>
-                        <div className="flex flex-row gap-1">
-                            <AiOutlineFire className="w-[18px] h-[18px]" />
-                            <p>{recipe.calories} calories</p>
-                        </div>
-                    </div>
-                    <div class="card-actions mt-6">
-                        <button onClick={() => handleAddToCart(recipe)} class="btn bg-[#0BE58A] rounded-full w-[170px] h-[49px]">Want to Cook</button>
+                    <div className="flex items-center text-gray-600">
+                        <AiOutlineFire className="w-5 h-5 mr-1" />
+                        <span>{recipe.calories} calories</span>
                     </div>
                 </div>
+                
+                <button 
+                    onClick={() => handleAddToCart(recipe)} 
+                    className="w-full bg-green-400 text-white py-2 px-4 rounded-full hover:bg-green-500 transition-colors duration-300"
+                >
+                    Want to Cook
+                </button>
             </div>
         </div>
     );
 };
 
-Recipe.PropTypes = {
-    recipe: PropTypes.object.isRequired,
-    handleAddToCart: PropTypes.func
-}
+Recipe.propTypes = {
+    recipe: PropTypes.shape({
+        recipe_image: PropTypes.string.isRequired,
+        recipe_name: PropTypes.string.isRequired,
+        short_description: PropTypes.string.isRequired,
+        ingredients: PropTypes.arrayOf(PropTypes.string).isRequired,
+        preparing_time: PropTypes.number.isRequired,
+        calories: PropTypes.number.isRequired,
+    }).isRequired,
+    handleAddToCart: PropTypes.func.isRequired
+};
 
 export default Recipe;
 

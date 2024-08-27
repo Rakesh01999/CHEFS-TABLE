@@ -1,31 +1,49 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Recipe from "../Recipe/Recipe";
-import PropTypes from 'prop-types'
+import PropTypes from 'prop-types';
 
-const Recipes = ({handleAddToCart}) => {
-    const [recipes, setRecipes] = useState([])
+const Recipes = ({ handleAddToCart }) => {
+    const [recipes, setRecipes] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
+        setIsLoading(true);
         fetch('recipes.json')
             .then(res => res.json())
-            .then(data => setRecipes(data))
-    }, [])
+            .then(data => {
+                setRecipes(data);
+                setIsLoading(false);
+            })
+            .catch(error => {
+                console.error("Error fetching recipes:", error);
+                setIsLoading(false);
+            });
+    }, []);
 
     return (
-        <div className="mx-10 md:mx-32">
-            {/* <h3>Recipes: {recipes.length}</h3> */}
-            <div className="w-[890px] p-6 grid md:grid-cols-2">
-                {
-                    recipes.map(recipe => <Recipe key={recipe.id} recipe={recipe} handleAddToCart={handleAddToCart}></Recipe>)
-                }
-            </div>
-
+        <div className=" container mx-auto px-4 py-8">
+            <h2 className="text-3xl font-bold text-center mb-8 text-gray-800">Our Delicious Recipes</h2>
+            {isLoading ? (
+                <div className="flex justify-center items-center h-64">
+                    <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-gray-900"></div>
+                </div>
+            ) : (
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {recipes.map(recipe => (
+                        <Recipe 
+                            key={recipe.id} 
+                            recipe={recipe} 
+                            handleAddToCart={handleAddToCart}
+                        />
+                    ))}
+                </div>
+            )}
         </div>
     );
 };
 
-Recipes.protoTypes = {
-    handleAddToCart: PropTypes.func   
-}
+Recipes.propTypes = {
+    handleAddToCart: PropTypes.func.isRequired
+};
 
 export default Recipes;

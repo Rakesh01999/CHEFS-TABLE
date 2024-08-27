@@ -1,28 +1,34 @@
 import React from 'react';
 
 const Banner = () => {
-    return (
-        <div>
-            <div class="md:container md:mx-auto">
-                {/* <div class="bg-[url(assets/banner.png)] h-[550px] w-[1171px] mx-auto"> */}
-                <div class="w-[384px] h-[600px] md:w-[1320px] md:h-[600px] bg-[url(assets/banner.png)] bg-no-repeat mt-2 mx-10 md:mx-20">
-                    <div class="px-1 py-10 md:py-28 mx-12 md:mx-52 mt-16 w-[200px] h-[200px] md:w-[742px] md:h-[345px] ">
-                        <h1 class="text-[#FFFFFF] font-extrabold w-[200px] h-[200px] md:w-[897px] text-[28px] md:text-[52px] text-center"> Discover an exceptional cooking class tailored for you! </h1>
-                        {/* <h3 class="text-center text-[#1DD100] font-extrabold text-[64px]">P Paribahan</h3> */}
-                        <p class="text-gray-200 w-[200px] md:w-[933px] text-center text-[18px]">
-                        Learn and Master Basic Programming, Data Structures, Algorithm, OOP, Database and solve 500+ coding problems to become an exceptionally well world-class Programmer.
-                        </p>
-                        <div class="md:mx-72 mt-8 md:flex md:gap-7">
-                            <button
-                                class="btn bg-[#0BE58A] w-[170px] h-[65px] border-none rounded-full text-[20px] font-semibold">Explore Now
-                            </button>
-                            <button class="btn btn-ghost border-white w-[170px] h-[65px] rounded-full text-[20px] font-semibold text-white">Our Feedback</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  return (
+    // <div className="container mx-auto relative w-full h-screen bg-gray-900">
+    <div className="container mx-auto relative w-full md:h-[600px] bg-gray-900">
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-[url(assets/banner.png)] bg-no-repeat"
+        // style={{ backgroundImage: "url(assets/banner.png)" }}
+      ></div>
+      <div className="absolute inset-0 bg-black bg-opacity-50"></div>
+      <div className="relative h-full flex items-center justify-center px-4 sm:px-6 lg:px-8">
+        <div className="text-center">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white mb-4 animate-fade-in-down">
+            Discover an exceptional cooking class tailored for you!
+          </h1>
+          <p className="mt-3 max-w-md mx-auto text-base sm:text-lg md:mt-5 md:text-xl text-gray-300 animate-fade-in-up">
+            Learn and Master Basic Programming, Data Structures, Algorithm, OOP, Database and solve 500+ coding problems to become an exceptionally well world-class Programmer.
+          </p>
+          <div className="mt-10 flex justify-center gap-4">
+            <button className="px-8 py-3 border border-transparent text-base font-medium rounded-full text-black bg-green-400 hover:bg-green-500 md:py-4 md:text-lg md:px-10 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110">
+              Explore Now
+            </button>
+            <button className="px-8 py-3 border border-transparent text-base font-medium rounded-full text-white bg-opacity-0 hover:bg-white hover:bg-opacity-10 border-white md:py-4 md:text-lg md:px-10 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110">
+              Our Feedback
+            </button>
+          </div>
         </div>
-    );
+      </div>
+    </div>
+  );
 };
 
 export default Banner;
