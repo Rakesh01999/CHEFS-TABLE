@@ -12,11 +12,11 @@ const Currents = ({ currents, time, calorie }) => {
                 <p>Time</p>
                 <p>Calories</p>
             </div>
-            {/* <h2 className='text-3xl'>Cart: {cart.length}</h2> */}
-            {
+            {/* <ol className='list-decimal'>{ */}
+            <ol style={{ listStyleType: 'decimal' }}>{
                 // currents.map(incart => <Incart key={incart.id} incart={incart}></Incart>)
                 currents.map(current => <Current key={current.id} current={current}></Current>)
-            }
+            }</ol>
             <div className='border-b-2 border-gray-300 my-4'></div>
             <div className='flex gap-10 ml-36 w-[250px]'>
                 <div className='font-semibold'>Total Time =

@@ -95,8 +95,8 @@ function App() {
       <div className='md:flex '>
         <Recipes handleAddToCart={handleAddToCart}></Recipes>
         <div className='w-[514px] border border-solid border-gray-400 rounded-2xl mt-10'>
-          <Cart handleAddToCurrents={handleAddToCurrents} handleRemoveFromCart={handleRemoveFromCart} time={time} cart={cart}></Cart>
-          <Currents currents={currents} time={time} calorie={calorie}></Currents>
+          <Cart handleAddToCurrents={handleAddToCurrents} handleRemoveFromCart={handleRemoveFromCart} cart={cart} ></Cart>
+          <Currents currents={currents} time={time} calorie={calorie} ></Currents>
         </div>
       </div>
       <div>

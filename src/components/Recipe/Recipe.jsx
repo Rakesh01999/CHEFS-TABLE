@@ -8,7 +8,7 @@ const Recipe = ({ recipe, handleAddToCart }) => {
         <div>
             {/* <h3>Recipe: {recipe.recipe_name}</h3> */}
             <div class="card w-96 h-[684px] bg-base-100 shadow-xl mt-6">
-                <figure class="px-6 pt-6">
+                <figure class="px-6 pt-6 rounded-xl">
                     <img src={recipe.recipe_image} class="rounded-xl" />
                 </figure>
                 <div class="card-body">
@@ -56,3 +56,4 @@ Recipe.PropTypes = {
 }
 
 export default Recipe;
+
