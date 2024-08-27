@@ -41,7 +41,7 @@ function App() {
       //   pauseOnHover: true,
       //   draggable: true,
       //   progress: undefined,
-      // });
+      // }); 
       toast('This recipe is already exists in your cart!');
       <Toast></Toast>
     } 
