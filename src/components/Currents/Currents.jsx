@@ -9,7 +9,7 @@ const Currents = ({ currents, time, calorie }) => {
                 Currently cooking: <span className="text-teal-600">{currents.length}</span>
             </h1>
             <div className="border-b-2 border-gray-300 my-4"></div>
-            <div className="px-5 flex gap-20 text-[14px] md:text-[16px] font-medium text-gray-700">
+            <div className="px-5 flex gap-10 md:gap-20 text-[14px] md:text-[16px] font-medium text-gray-700">
                 <p>Name</p>
                 <p>Time</p>
                 <p>Calories</p>
@@ -21,7 +21,7 @@ const Currents = ({ currents, time, calorie }) => {
             </ol>
             <div className="border-b-2 border-gray-300 my-4"></div>
             {/* <div className="flex justify-between items-center text-[16px] font-semibold text-gray-700"> */}
-            <div className="flex ml-36 items-center text-[16px] font-semibold text-gray-700">
+            <div className="flex ml-24 md:ml-36 items-center text-[16px] font-semibold text-gray-700">
                 <div>Total Time: <span className="text-teal-600">{time} minutes</span></div>
                 <div>Total Calories: <span className="text-teal-600">{calorie} kcal</span></div>
             </div>
