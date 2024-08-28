@@ -11,7 +11,7 @@ const Banner = () => {
       <div className="absolute inset-0 bg-black bg-opacity-50"></div>
       <div className="relative h-full flex items-center justify-center px-4 sm:px-6 lg:px-8">
         <div className="text-center">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white mb-4 animate-fade-in-down">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl font-extrabold text-white mb-4 animate-fade-in-down">
             Discover an exceptional cooking class tailored for you!
           </h1>
           <p className="mt-3 max-w-md mx-auto text-base sm:text-lg md:mt-5 md:text-xl text-gray-300 animate-fade-in-up">
