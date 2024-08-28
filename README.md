@@ -5,9 +5,11 @@ Live-Link: [Chefs-Table](https://react-spa-assignment-7.netlify.app/)
 The CHEFS Table project aims to create a comprehensive and interactive platform for cooking enthusiasts. The website is designed to provide users with a seamless and engaging experience in discovering, learning, and mastering various culinary skills. It caters to both novice and experienced cooks, offering a range of features that enhance the cooking journey.
 
 # .........
-Technologies Used:
+## Technologies Used:
 
-
+* Frontend: React.js, Tailwind CSS, DaisyUI, React Icons, React Toastify
+* State Management: React's useState hook
+* Responsive Design: Tailwind CSS classes for flexible layouts
 
 ## React + Vite
 
