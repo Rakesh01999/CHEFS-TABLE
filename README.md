@@ -7,9 +7,9 @@ The CHEFS Table project aims to create a comprehensive and interactive platform 
 # .........
 ## Technologies Used:
 
-* Frontend: React.js, Tailwind CSS, DaisyUI, React Icons, React Toastify
-* State Management: React's useState hook
-* Responsive Design: Tailwind CSS classes for flexible layouts
+* *Frontend*: React.js, Tailwind CSS, DaisyUI, React Icons, React Toastify
+* *State Management*: React's useState hook
+* *Responsive Design*: Tailwind CSS classes for flexible layouts
 
 ## React + Vite
 
