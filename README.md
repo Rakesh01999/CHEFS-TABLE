@@ -25,7 +25,8 @@ The CHEFS Table project aims to create a comprehensive and interactive platform 
 
 * **Data Management**: The website efficiently handles user interactions, such as adding recipes to the cart, managing currently cooking items, and calculating total preparation time and calories. This data-driven approach ensures that users have all the information they need to plan their cooking sessions effectively.
 
-## Outcome: The CHEFS Table project successfully delivers a feature-rich, responsive, and visually appealing platform that enhances the cooking experience for users. It provides an engaging environment where users can learn, organize, and enjoy cooking, making it a valuable resource for anyone passionate about the culinary arts.
+## Outcome: 
+The CHEFS Table project successfully delivers a feature-rich, responsive, and visually appealing platform that enhances the cooking experience for users. It provides an engaging environment where users can learn, organize, and enjoy cooking, making it a valuable resource for anyone passionate about the culinary arts.
 
 ## React + Vite
 
