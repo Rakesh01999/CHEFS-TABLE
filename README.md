@@ -1,10 +1,13 @@
 # CHEFS-TABLE
 Live-Link: [Chefs-Table](https://react-spa-assignment-7.netlify.app/)
 
-# Overview:
+## Overview:
 The CHEFS Table project aims to create a comprehensive and interactive platform for cooking enthusiasts. The website is designed to provide users with a seamless and engaging experience in discovering, learning, and mastering various culinary skills. It caters to both novice and experienced cooks, offering a range of features that enhance the cooking journey.
 
-# ----------
+# .........
+Technologies Used:
+
+
 
 ## React + Vite
 
