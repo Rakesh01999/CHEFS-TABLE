@@ -28,7 +28,8 @@ const Recipes = ({ handleAddToCart }) => {
                     <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-gray-900"></div>
                 </div>
             ) : (
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                // <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                 <div className="grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-4">
                     {recipes.map(recipe => (
                         <Recipe 
                             key={recipe.id} 
