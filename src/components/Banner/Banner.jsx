@@ -17,14 +17,16 @@ const Banner = () => {
           <p className="mt-3 max-w-md mx-auto text-base sm:text-lg md:mt-5 md:text-xl text-gray-300 animate-fade-in-up">
             Learn and Master Basic Programming, Data Structures, Algorithm, OOP, Database and solve 500+ coding problems to become an exceptionally well world-class Programmer.
           </p>
+
           <div className="mt-10 flex justify-center gap-4">
-            <button className="px-8 py-3 border border-transparent text-base font-medium rounded-full text-black bg-green-400 hover:bg-green-500 md:py-4 md:text-lg md:px-10 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110">
+            <button className="px-8 py-3 border border-transparent mb-2 w-24 h-14 md:w-52 md:h-16 flex justify-center items-center text-center text-base font-medium rounded-full text-black bg-green-400 hover:bg-green-500 md:py-4 md:text-lg md:px-10 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110">
               Explore Now
             </button>
-            <button className="px-8 py-3 border border-transparent text-base font-medium rounded-full text-white bg-opacity-0 hover:bg-white hover:bg-opacity-10 border-white md:py-4 md:text-lg md:px-10 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110">
+            <button className="px-8 py-3 border border-transparent w-24 h-14 md:w-52 md:h-16 flex justify-center items-center text-center text-base font-medium rounded-full text-white bg-opacity-0 hover:bg-white hover:bg-opacity-10 border-white md:py-4 md:text-lg md:px-10 transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110">
               Our Feedback
             </button>
           </div>
+          
         </div>
       </div>
     </div>
